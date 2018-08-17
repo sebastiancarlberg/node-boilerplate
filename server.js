@@ -1,11 +1,11 @@
 // server.js
 // call the packages we need
 var express = require('express'); // call express
-var app = express(); // define our app using express
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 var config = require('./config'); // get our config file
+var app = express(); // define our app using express
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 var port = config.port; // set our port
-mongoose.connect(config.database); // connect to database
+mongoose.connect(config.database, { useNewUrlParser: true }); // connect to database
 app.set('tokenKey', config.secret); // secret variable
 
 // use morgan to log requests to the console
