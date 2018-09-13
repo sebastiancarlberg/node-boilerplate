@@ -27,6 +27,8 @@ AuthenticateController.route('/')
                   });
               } else {
                   // if user is found and password is right
+                  var roles = user.roles;
+                  console.log("roles: " + roles);
                   var claims = {
                       sub: user.username,
                       iss: 'https://localhost:8080',

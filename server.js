@@ -1,11 +1,11 @@
 // server.js
 // call the packages we need
-var express = require('express'); // call express
-var bodyParser = require('body-parser');
-var morgan = require('morgan');
-var mongoose = require('mongoose');
-var config = require('./config'); // get our config file
-var app = express(); // define our app using express
+var express     = require('express'); // call express
+var bodyParser  = require('body-parser');
+var morgan      = require('morgan');
+var mongoose    = require('mongoose');
+var config      = require('./config'); // get our config file
+var app         = express(); // define our app using express
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({

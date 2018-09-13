@@ -21,6 +21,8 @@ tokenController.use(function(req, res, next) {
             } else {
                 // continue with the request
                 req.decoded = decoded;
+                console.log('username: ' + decoded.body.sub);
+                
                 next();                                                         // TODO: only if correct permission in token
             }
         });

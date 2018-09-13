@@ -3,14 +3,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // set up a mongoose model and pass it using module.exports
-module.exports = mongoose.model('User', new Schema({
-    username: String,
-    firstname: String,
-    lastname: String,
-    password: String,
-    email: String,
-    admin: Boolean,
-    roles: [String],
-    salt: String,
+module.exports = mongoose.model('Nihss', new Schema({
+    consciousness: String,
+    orientation: String,
+    comprehension: String,
+    author: String,
+    authorusername: String,
     created: { type: Date, default: Date.now }
 }));
